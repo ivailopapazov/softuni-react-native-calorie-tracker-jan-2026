@@ -1,4 +1,5 @@
-import { Modal, Text, TextInput, View, StyleSheet, Button } from "react-native";
+import { Modal, Text, TextInput, View, StyleSheet } from "react-native";
+import Button from "../common/Button";
 
 export default function AddMeal({
     visible,
@@ -25,9 +26,9 @@ export default function AddMeal({
                         <TextInput placeholder="0" keyboardType="number-pad" />
                     </View>
 
-                    <View>
-                        {/* <Button title="Back" />
-                        <Button title="Add" /> */}
+                    <View style={{ flexDirection: 'row', justifyContent: 'center', gap: 10}}>
+                        <Button title="Back" type="secondary" />
+                        <Button title="Add" />
                     </View>
                 </View>
             </View>
