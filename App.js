@@ -4,7 +4,27 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      {/* Header */}
+      <View>
+        <Text>Calorie Tracker</Text>
+      </View>
+      
+      {/* Overview */}
+      <View>
+        <Text>Calorie Overview</Text>
+      </View>
+      
+      {/* Meal Section */}
+      <View>
+        <Text>List of meals</Text>
+      </View>
+
+      {/* App Bar */}
+      <View>
+        <Text>App Bar</Text>
+      </View>
+
+
       <StatusBar style="auto" />
     </View>
   );
@@ -15,6 +35,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
 });
