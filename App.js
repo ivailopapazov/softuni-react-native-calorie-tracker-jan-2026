@@ -1,13 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { StyleSheet, Text, View } from 'react-native';
+import { Home, Plus } from 'lucide-react-native';
 
 export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         {/* Header */}
-        <View style={[styles.section, styles.header]}>
+        <View style={[styles.endSection, styles.header]}>
           <Text style={styles.heading}>Calorie Tracker</Text>
         </View>
 
@@ -22,8 +23,9 @@ export default function App() {
         </View>
 
         {/* App Bar */}
-        <View style={styles.section}>
-          <Text>App Bar</Text>
+        <View style={styles.endSection}>
+          <Home />
+          <Plus />
         </View>
 
         <StatusBar style="auto" />
@@ -43,6 +45,15 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  endSection: {
+    width: '100%',
+    backgroundColor: colors.white,
+    borderWidth: 1,
+    borderColor: '#edf2f7',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    paddingVertical: 20,
   },
   section: {
     boxShadow: [{ offsetX: 2, offsetY: 3, blurRadius: 4, color: 'rgba(200, 200, 200, 0.53)' }],
