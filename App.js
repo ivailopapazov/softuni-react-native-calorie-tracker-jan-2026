@@ -6,6 +6,7 @@ import { styles } from './styles';
 import MealSection from './components/meal-section/MealSection';
 import AddMeal from './components/add-meal/AddMeal';
 import { useMemo, useState } from 'react';
+import Slider from '@react-native-community/slider';
 
 export default function App() {
   const [showAddMeal, setShowAddMeal] = useState(false);
@@ -36,6 +37,15 @@ export default function App() {
         {/* Overview */}
         <View style={styles.section}>
           <Text>Calorie Overview</Text>
+          <Slider
+            style={{ width: 200, height: 40 }}
+            minimumValue={0}
+            maximumValue={2000}
+            minimumTrackTintColor="#FFFFFF"
+            maximumTrackTintColor="#000000"
+            disabled
+            value={totalCalories}
+          />
         </View>
 
         {/* Meal Section */}

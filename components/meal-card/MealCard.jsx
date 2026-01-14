@@ -10,10 +10,12 @@ export default function MealCard({
     return (
         <View style={styles.container}>
             <Text>{name}</Text>
-            <Text>{calories} cal</Text>
-            <TouchableHighlight onPress={() => onDelete(id)}>
-                <Delete />
-            </TouchableHighlight>
+            <View style={{flexDirection: 'row', gap: 10}}>
+                <Text>{calories} cal</Text>
+                <TouchableHighlight onPress={() => onDelete(id)}>
+                    <Delete />
+                </TouchableHighlight>
+            </View>
         </View>
     );
 }
